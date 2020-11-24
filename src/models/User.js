@@ -14,7 +14,7 @@ const UserSchema = new mongoose.Schema({
         virtuals: true,
     }
 });
-
+//teste
 UserSchema.pre('save', async function (next) {
     const hash = await bcrypt.hash(this.senha, 10);
     this.senha = hash; 
